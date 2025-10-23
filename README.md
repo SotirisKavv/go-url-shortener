@@ -1,4 +1,4 @@
-# 🔗 URL Shortener API (Go) - **Advanced Level**
+# 🔗 URL Shortener API (Go)
 
 A production-ready RESTful API for URL shortening with PostgreSQL persistence, analytics, and enterprise architecture. Demonstrates advanced Go web development, database design, and scalable microservice patterns.
 
