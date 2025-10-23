@@ -1,6 +1,13 @@
-# 🔗 URL Shortener API (Go)
+# URL Shortener API — PostgreSQL persistence and analytics in Go
 
 A production-ready RESTful API for URL shortening with PostgreSQL persistence, analytics, and enterprise architecture. Demonstrates advanced Go web development, database design, and scalable microservice patterns.
+
+Quick links:
+- Entrypoint: `urlshorten.go`
+- Router: `router/router.go`
+- Handler: `handler/url_handler.go`
+- Model: `model/url.go`
+- Repository: `repository/postgress_repo.go`
 
 ---
 
@@ -34,9 +41,9 @@ A comprehensive URL shortening service with click tracking, expiration managemen
 
 ## 🛠️ Usage
 
-```sh
+```powershell
 # Setup database and environment
-echo "DATABASE_URL=postgres://user:pass@localhost/urldb" > .env
+"DATABASE_URL=postgres://user:pass@localhost/urldb" | Out-File -Encoding utf8 .env
 go mod tidy
 
 # Start API server
@@ -65,5 +72,22 @@ This project demonstrates:
 - **Scalability:** Repository pattern enabling horizontal scaling
 
 ---
+
+## Folder map
+
+- `urlshorten.go`: App entry and wiring
+- `router/`: Route registration
+- `handler/url_handler.go`: HTTP handlers
+- `model/url.go`: URL domain model
+- `repository/postgress_repo.go`: Postgres repository
+- `utils/utils.go`: Helpers
+
+
+## Next steps (ideas)
+
+- Add rate limiting and auth for URL creation
+- Add Redis cache for hot shortened URLs
+- Add custom alias reservation and conflict resolution
+
 
 **Author:** IAmSotiris
